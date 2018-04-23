@@ -456,7 +456,7 @@ namespace cryptonote
 
     BEGIN_SERIALIZE()
       VARINT_FIELD(major_version)
-      if(major_version > BLOCK_MAJOR_VERSION_2) return false;
+      if(major_version > BLOCK_MAJOR_VERSION_3) return false;
       VARINT_FIELD(minor_version)
       if (BLOCK_MAJOR_VERSION_1 == major_version)
       {
@@ -571,7 +571,7 @@ namespace cryptonote
     BEGIN_SERIALIZE()
       //block header
       VARINT_FIELD(b.major_version)
-      if(b.major_version > BLOCK_MAJOR_VERSION_2) return false;
+      if(b.major_version > BLOCK_MAJOR_VERSION_3) return false;
       VARINT_FIELD(b.minor_version)
       VARINT_FIELD(b.timestamp)
       FIELD(b.prev_id)
